@@ -2,7 +2,15 @@ import Image from 'next/image'
 import styles from './editProduct.module.css'
 import { fetchProduct } from '@/lib/data'
 
-const EditProductPage = async ({ params }) => {
+interface ParamsProps {
+    id: string
+}
+
+interface EditProductPageProps {
+    params: ParamsProps
+}
+
+const EditProductPage = async ({ params }: EditProductPageProps) => {
     const { id } = params
     const product = await fetchProduct(id)
     return (

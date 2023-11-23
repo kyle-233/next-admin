@@ -3,7 +3,15 @@ import styles from './editUser.module.css'
 import { fetchUser } from '@/lib/data'
 import { updateUser } from '@/lib/actions'
 
-const EditUserPage = async ({ params }) => {
+interface ParamsProps {
+    id: string
+}
+
+interface EditUserPageProps {
+    params: ParamsProps
+}
+
+const EditUserPage = async ({ params }: EditUserPageProps) => {
     const { id } = params
     const user = await fetchUser(id)
     return (

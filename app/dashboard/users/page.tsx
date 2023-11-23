@@ -5,7 +5,16 @@ import Image from 'next/image'
 import { fetchUsers } from '@/lib/data'
 import { deleteUser } from '@/lib/actions'
 
-const UsersPage = async ({ searchParams }) => {
+interface SearchParamsProps {
+    q?: string
+    page?: string
+}
+
+interface UsersPageProps {
+    searchParams: SearchParamsProps
+}
+
+const UsersPage = async ({ searchParams }: UsersPageProps) => {
     const q = searchParams?.q || ''
     const page = Number(searchParams?.page) || 1
 

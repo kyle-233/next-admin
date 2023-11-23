@@ -3,7 +3,11 @@
 import { useRouter, useSearchParams, usePathname } from 'next/navigation'
 import styles from './Pagination.module.css'
 
-export const Pagination = ({ count }) => {
+interface PaginationProps {
+    count: number
+}
+
+export const Pagination = ({ count }: PaginationProps) => {
     const searchParams = useSearchParams()
     const { replace } = useRouter()
     const pathname = usePathname()

@@ -3,10 +3,20 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from './products.module.css'
 import { fetchProducts } from '@/lib/data'
+import { deleteProduct } from '@/lib/actions'
 
-const ProductsPage = async ({ searchParams }) => {
+interface SearchParamsProps {
+    q?: string
+    page?: string
+}
+
+interface ProductsPageProps {
+    searchParams: SearchParamsProps
+}
+
+const ProductsPage = async ({ searchParams }: ProductsPageProps) => {
     const q = searchParams?.q || ''
-    const page = parseInt(searchParams?.page) || 1
+    const page = parseInt(searchParams?.page || '1')
 
     const { count, products } = await fetchProducts(q, page)
     console.log(products)

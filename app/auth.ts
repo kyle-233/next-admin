@@ -5,7 +5,23 @@ import { authConfig } from '@/auth.config'
 import { connectToDB } from '@/lib/utils'
 import { User } from '@/lib/models'
 
-const login = async (credentials) => {
+type CredentialsProps = {
+    username: string
+    password: string
+} & Partial<Record<string, unknown>>
+
+export interface UserProps {
+    username: string
+    email: string
+    password: string
+    img: string
+    phone: string
+    address: string
+    isAdmin: boolean
+    isActive: boolean
+}
+
+const login = async (credentials: CredentialsProps) => {
     try {
         connectToDB()
         const user = await User.findOne({ username: credentials.username })
@@ -16,6 +32,8 @@ const login = async (credentials) => {
             user.password
         )
         if (!isPasswordCorrect) throw new Error('Wrong credentials')
+
+        return user
     } catch (e) {
         console.log(e)
     }
@@ -27,7 +45,8 @@ export const { signIn, signOut, auth } = NextAuth({
         CredentialsProvider({
             async authorize(credentials) {
                 try {
-                    const user = await login(credentials)
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    const user = await login(credentials as any)
                     return user
                 } catch (e) {
                     return null
@@ -45,8 +64,8 @@ export const { signIn, signOut, auth } = NextAuth({
         },
         async session({ session, token }) {
             if (token) {
-                session.user.username = token.username
-                session.user.img = token.img
+                session.user.username = token.username as string
+                session.user.img = token.img as string
             }
             return session
         },
