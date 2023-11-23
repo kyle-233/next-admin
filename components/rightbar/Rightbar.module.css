@@ -1,16 +1,16 @@
-.container{
+.container {
     position: fixed;
 }
 
-.item{
+.item {
     position: relative;
     background-image: linear-gradient(to top, #182237, #243352);
     padding: 20px 24px;
     border-radius: 10px;
-    margin-bottom: 20px;   
+    margin-bottom: 20px;
 }
 
-.bgContainer{
+.bgContainer {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -18,28 +18,28 @@
     height: 50%;
 }
 
-.bg{
+.bg {
     object-fit: contain;
     opacity: 0.2;
 }
 
-.texts{
+.texts {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.notification{
+.notification {
     font-weight: bold;
 }
 
-.title{
+.title {
     font-weight: 500;
     font-style: 12px;
     color: var(--textSoft);
 }
 
-.button{
+.button {
     padding: 10px;
     display: flex;
     align-items: center;

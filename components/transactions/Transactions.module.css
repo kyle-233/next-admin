@@ -1,49 +1,49 @@
-.container{
+.container {
     background-color: var(--bgSoft);
     padding: 20px;
     border-radius: 10px;
 }
 
-.title{
+.title {
     margin-bottom: 20px;
     font-weight: 200;
     color: var(--textSoft);
 }
 
-.table{
+.table {
     width: 100%;
 }
 
-.table td{
+.table td {
     padding: 10px;
 }
 
-.user{
+.user {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.userImage{
+.userImage {
     object-fit: cover;
     border-radius: 50%;
 }
 
-.status{
+.status {
     border-radius: 5px;
     padding: 5px;
     font-style: 14px;
     color: white;
 }
 
-.pending{
+.pending {
     background-color: #f7cb7375;
 }
 
-.done{
+.done {
     background-color: #afd6ee75;
 }
 
-.cancelled{
+.cancelled {
     background-color: #f7737375;
 }

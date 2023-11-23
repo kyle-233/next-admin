@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import Link from 'next/link'
 import styles from './menuLink.module.css'
@@ -15,13 +15,17 @@ interface MenuLinkProps {
     item: MenuLinkItemProps
 }
 
-export const MenuLink = ({item}: MenuLinkProps) => {
+export const MenuLink = ({ item }: MenuLinkProps) => {
     const pathname = usePathname()
-  return (
-    <Link href={item.path} className={`${styles.container} ${pathname === item.path && styles.active}`}>
-        {item.icon}
-        {item.title}
-    </Link>
-  )
+    return (
+        <Link
+            href={item.path}
+            className={`${styles.container} ${
+                pathname === item.path && styles.active
+            }`}
+        >
+            {item.icon}
+            {item.title}
+        </Link>
+    )
 }
-

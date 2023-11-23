@@ -3,44 +3,44 @@
     top: 40px;
 }
 
-.user{
+.user {
     display: flex;
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
 }
 
-.userImage{
+.userImage {
     border-radius: 50%;
     object-fit: cover;
 }
 
-.userDetail{
+.userDetail {
     display: flex;
     flex-direction: column;
 }
 
-.username{
+.username {
     font-weight: 500;
 }
 
-.userTitle{
+.userTitle {
     font-style: 12px;
     color: var(--textSoft);
 }
 
-.list{
+.list {
     list-style: none;
 }
 
-.cat{
+.cat {
     color: var(--textSoft);
     font-weight: bold;
     font-style: 13px;
     margin: 10px 0;
 }
 
-.logout{
+.logout {
     padding: 20px;
     display: flex;
     align-items: center;
@@ -54,6 +54,6 @@
     width: 100%;
 }
 
-.logout:hover{
+.logout:hover {
     background-color: #2e374a;
 }
