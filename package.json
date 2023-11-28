@@ -1,38 +1,38 @@
 {
-  "name": "nextadmin",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky install"
-  },
-  "dependencies": {
-    "bcrypt": "^5.1.1",
-    "mongoose": "^8.0.1",
-    "next": "14.0.2",
-    "next-auth": "^5.0.0-beta.3",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^4.12.0",
-    "recharts": "^2.9.3",
-    "use-debounce": "^10.0.0"
-  },
-  "devDependencies": {
-    "@types/bcrypt": "^5.0.2",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@typescript-eslint/eslint-plugin": "^6.12.0",
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-next": "14.0.2",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.25.2",
-    "husky": "^8.0.3",
-    "prettier": "^3.1.0",
-    "typescript": "^5"
-  }
+    "name": "nextadmin",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "mongoose": "^8.0.1",
+        "next": "14.0.2",
+        "next-auth": "^5.0.0-beta.3",
+        "react": "^18",
+        "react-dom": "^18",
+        "react-icons": "^4.12.0",
+        "recharts": "^2.9.3",
+        "use-debounce": "^10.0.0"
+    },
+    "devDependencies": {
+        "@types/bcrypt": "^5.0.2",
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "@typescript-eslint/eslint-plugin": "^6.12.0",
+        "eslint": "^8.2.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-next": "14.0.2",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-import": "^2.25.2",
+        "husky": "^8.0.3",
+        "prettier": "^3.1.0",
+        "typescript": "^5"
+    }
 }

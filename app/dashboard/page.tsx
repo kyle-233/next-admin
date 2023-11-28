@@ -4,23 +4,21 @@ import { Transactions } from '@/components/transactions/Transactions'
 import { Chart } from '@/components/chart/Chart'
 import styles from './dashboard.module.css'
 
-const Dashboard = () => {
-    return (
-        <div className={styles.wrapper}>
-            <div className={styles.main}>
-                <div className={styles.cards}>
-                    <Card />
-                    <Card />
-                    <Card />
-                </div>
-                <Transactions />
-                <Chart />
+const Dashboard = () => (
+    <div className={styles.wrapper}>
+        <div className={styles.main}>
+            <div className={styles.cards}>
+                <Card />
+                <Card />
+                <Card />
             </div>
-            <div className={styles.side}>
-                <Rightbar />
-            </div>
+            <Transactions />
+            <Chart />
         </div>
-    )
-}
+        <div className={styles.side}>
+            <Rightbar />
+        </div>
+    </div>
+)
 
 export default Dashboard
